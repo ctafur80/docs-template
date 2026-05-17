@@ -1,0 +1,61 @@
+
+/* Tablas, en general. También se especifican tablas en la hoja CSS de matemáticas. */
+
+/* No soy capaz de hacer que estén centradas. Además, preferiría
+ * no hacer display block. */
+
+
+
+/* Ajustes genéricos para las tablas. */
+table {
+    margin: 2rem auto;
+    overflow-x: auto;
+    border-spacing: 1rem 0;
+    border-collapse: collapse;
+}
+
+
+table, th, td {
+    border: 1px solid var(--main-fg-color);
+    padding: 10px;
+}
+
+table tr th,
+table tr td {
+    text-align: center;
+}
+
+/* No lo muestra */
+table thead tr {
+    border-bottom: 1px solid var(--main-fg-color);
+}
+
+table thead tr th {
+    font-weight: bold;
+}
+
+
+
+
+
+/* Otro tipo de tabla. */
+table.tbl-2 {
+    border-collapse: collapse;
+}
+
+table.tbl-2 tbody tr td {
+    text-align: left;
+    vertical-align: top;
+}
+
+table.tbl-2 thead tr th,
+table.tbl-2 tbody tr td {
+    border: 1px solid var(--main-fg-color);
+    padding: 0.3rem;
+}
+
+
+
+
+
+

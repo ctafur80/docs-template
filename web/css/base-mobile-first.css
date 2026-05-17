@@ -1,0 +1,306 @@
+
+
+/* TODO Quizás, mover la carga de fuentes tipográficas a un archivo separado. */
+
+
+
+/*
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+*/
+
+
+
+body {
+    font-family: var(--main-font);
+    font-size: var(--main-font-size);
+    font-weight: var(--main-font-weight);
+    color: var(--main-fg-color);
+    background: var(--main-bg-color);
+
+    margin: auto;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+    letter-spacing: var(--main-font-letter-spacing);
+    /* line-height: 1.45; */
+}
+
+
+/* Show in realtime the current section. */
+#breadcrumb {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    color: black;
+    /*color:  var(--main-bg-color);*/
+    background: var(--boton);
+    /*background: var(--main-fg-color);*/
+    padding: 5px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px var(--main-fg-color);
+    z-index: 1000;
+    font-weight: 800;
+    font-style: italic;
+    margin-right: 10px;
+}
+
+
+#TOC {
+    text-decoration: none;
+}
+
+#TOC ul {
+    list-style-type: none;
+}
+
+#TOC li a {
+    text-indentation: -1rem;
+}
+
+#TOC a::after {
+    content: "";
+}
+
+
+p {
+    text-align: left;
+    hyphens: auto;
+}
+
+/*
+img {
+    width: 90%;
+    height: auto;
+}
+*/
+
+
+
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--headings-font);
+    font-weight: var(--headings-font-weight);
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 22px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+h4 {
+    font-size: 16px;
+}
+
+h5 {
+    font-size: 14px;
+}
+
+h6 {
+    font-size: 12px;
+}
+
+
+
+strong {
+    font-weight: 500;
+}
+
+
+
+
+/* Anclas (anchors) y URIs, en general */
+a:link, a:visited, a:active {
+    color: var(--main-fg-color);
+    text-decoration: none;
+}
+
+a::after {
+    /* content: " \1f517"; */
+    content: "\00a0⧉";
+}
+
+a:hover {
+    color: hotpink; /* TODO Cambiarlo */
+    background: #423645;
+}
+
+a.uri,
+.csl-entry a {
+    font-style: italic;
+}
+
+a.uri::before,
+.csl-entry a::before {
+    content: "<";
+}
+
+a.uri::after,
+.csl-entry a::after,
+div.references a::after {
+    content: ">";
+}
+
+span.citation a::after {
+    content: "";
+}
+
+
+
+
+
+/* Notas a pie */
+a.footnote-ref::after,
+a.footnote-back::after,
+.csl-entry a::after {
+    content: "";
+}
+
+
+
+
+
+/* Cambios temáticos */
+hr {
+    border: none;
+}
+
+hr::before {
+    content: "\00a0\00a0\00a0\00a0*\00a0\00a0\00a0\00a0*\00a0\00a0\00a0\00a0*";
+    color: var(--main-fg-color);
+    display: block;
+    text-align: center;
+    margin: 1em auto;
+}
+
+
+
+
+figcaption,
+table caption {
+    font-style: italic;
+    font-size: 95%;
+    /* font-family: "Roboto", sans-serif; */
+}
+
+
+
+
+
+
+
+
+/* Título del documento */
+header,
+.author,
+.date {
+    /*margin: 0 auto;*/
+    text-align: center;
+}
+
+header .title {
+    margin: 8rem 0 2rem 0;
+}
+
+header {
+    margin-bottom: 28rem;
+}
+
+
+
+
+
+blockquote{
+    font-style: italic;
+    /*border-left: 0rem;*/
+}
+
+
+
+
+
+
+
+
+/* Figuras */
+figure {
+    /*margin: 0 auto;*/
+    text-align: center;
+    display: block;
+}
+
+/* Comparación de ecuaciones
+div.comparat {
+    display: grid;
+}
+*/
+
+
+#referencias::before {
+    /* No transforma el código HTML */
+    /*content: "<hr>";*/
+}
+
+
+
+#title-block-header {
+    margin-top: 16rem;
+}
+
+section.level1 {
+    margin-top: 38rem;
+}
+
+section.level2 {
+    margin-top: 6rem;
+}
+
+section.level3 {
+    margin-top: 3rem;
+}
+
+
+
+
+
+
+/*
+span.fs-path {
+    font-style: italic;
+}
+*/
+
+
+
+/* Elemento placeholder */
+span.ph {
+    font-style: italic;
+    hyphens: none;
+    color: #b8aabf;
+}
+
+span.ph::before {
+    font-style: italic;
+    /*content: "\0x27E8";*/
+    content: "⟨";
+}
+
+span.ph::after {
+    font-style: italic;
+    content: "⟩";
+}
+
+
+
+
+
+
+

@@ -1,0 +1,116 @@
+
+
+# Defaults file for technical docs.
+
+
+# Watch-out there are two ways of resolving paths:
+#
+# - Read by Pandoc: csl and highlight-style.
+# - Read by the web browser: css and html.
+
+
+from: markdown
+to: html
+
+
+output-file: index.html
+
+metadata-files:
+  - metad.yaml
+
+
+# Lo activo cuando deseo verlo también en otros dispositivos. Creo que en realidad no es
+# necesario para esto.
+# embed-resources: true
+
+# standalone: true
+toc: true
+number-sections: false
+
+filters:
+  - citeproc
+
+cite-method: citeproc
+csl: ../doc-web-settings/csl/ieee.csl
+
+verbosity: INFO
+log-file: log.json
+
+table-of-contents: true
+toc-depth: 4
+
+section-divs: true
+# strip-empty-paragraphs: false
+
+# eol: lf # lf, crlf, or native
+# strip-comments: false
+# ascii: true
+# default-image-extension: ".png"
+
+html-math-method:
+  method: mathml
+
+email-obfuscation: javascript
+
+tab-stop: 2
+preserve-tabs: true
+
+reference-links: true
+reference-location: document
+markdown-headings: atx
+
+
+table-caption-position: below
+figure-caption-position: below
+
+
+resource-path:
+  - figures
+
+
+html-q-tags: true
+
+css:
+  - ../doc-web-settings/css/variables.css
+  - ../doc-web-settings/css/base-mobile-first.css
+  - ../doc-web-settings/css/tablas.css
+  - ../doc-web-settings/css/tabla-contenidos.css
+  - ../doc-web-settings/css/codigo.css
+  - ../doc-web-settings/css/matematicas.css
+  - ../doc-web-settings/css/desktop.css
+
+
+highlight-style: doc-web-settings/code-hl/zf-darker.theme
+
+
+fail-if-warnings: false
+dump-args: false
+ignore-args: false
+trace: false
+
+shift-heading-level-by: -1
+
+track-changes: accept
+
+
+# Ajustes para la web de salida.
+include-before-body:
+  - ../doc-web-settings/html/elemento-breadcrumbs.html
+include-after-body:
+  - ../doc-web-settings/html/etiqueta-final-main.html
+include-in-header:
+  - ../doc-web-settings/html/elemento-nav.html
+  - ../doc-web-settings/html/elemento-boton-nav-bar.html
+  # - ../doc-web-settings/html/carga-breadcrumbs.html
+  # - ../doc-web-settings/html/carga-nav-bar.html
+  # - ../doc-web-settings/html/nameref.html
+  # - ../doc-web-settings/html/carga-ajustes-mathjax.html
+
+
+defaults:
+  - toc.yaml
+
+
+
+
+

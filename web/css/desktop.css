@@ -1,0 +1,82 @@
+
+
+/* Formato laptop y desktop */
+@media (width > 740px) {
+
+
+    body {
+        width: 690px;
+        font-size: 115%;
+        /* margin: 0 150px; */
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    h4 {
+        font-size: 22px;
+    }
+
+    h5 {
+        font-size: 20px;
+    }
+
+    h6 {
+        font-size: 18px;
+    }
+
+
+
+
+    /*
+    img {
+        width: 100%;
+    }
+    */
+
+    figure {
+        transform: scale(1.1);
+        margin: 48px;
+    }
+
+
+
+}
+
+
+
+@media (width > 860px) {
+
+    body {
+        width: 800px;
+        font-size: 115%;
+        /* margin: 0 150px; */
+    }
+
+
+
+    /*
+    img {
+        width: 100%;
+    }
+    */
+
+    figure {
+        transform: scale(1.1);
+        margin: 48px;
+    }
+
+
+
+}
+
+

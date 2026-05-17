@@ -1,0 +1,108 @@
+
+/* Texto que se refiere a código de programación. */
+
+
+
+/* Pulsaciones de teclas y atajos de teclado (shortcuts) */
+kbd {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 0.9rem;
+    font-style: italic;
+    border: 1px solid gray;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    border-radius: 4px;
+    box-shadow: 2px 2px gray;
+
+    margin-left: 2px;
+    margin-right: 4px;
+
+    /* I think this prevents wrapping in kbd text. */
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+
+h1 > code, h2 > code, h3 > code, h4 > code, h5 > code, h6 > code {
+    font-weight: var(--code-font-strong-weight);
+}
+
+
+
+pre {
+    max-width: 100%;
+    overflow-x: auto;
+    scrollbar-gutter: stable;
+
+    /* border-right: 1px solid #4a4646; */
+    padding: 12px;
+    border-radius: 7px;
+
+    /* Doesn't work on the scroll-hidden code. */
+    background: var(--code-bg-color);
+}
+
+code {
+    font-family: var(--code-font);
+    /* font-size: 78%; Para Libertinus Font */
+    font-size: var(--code-font-size);
+    font-weight: var(--code-font-weight);
+    white-space: pre;
+}
+
+pre code {
+    display: block;
+    /*min-width: 120%;*/
+    /* background: var(--code-bg-color); */
+}
+
+
+/* Ligeras variaciones al tema Zenburn (oscuro) para listados de código. */
+div.sourceCode,
+pre,
+code {
+    /* color: var(--code-fg-color); */
+}
+
+pre.sourceCode a {
+    text-decoration: none;
+}
+
+
+pre.sourceCode a:after {
+    content: "";
+}
+
+
+
+
+
+
+
+
+/* Scrollbar horizontal en listados de código */
+
+/* Para Firefox */
+pre {
+    scrollbar-width: thin;
+    scrollbar-color: #f1f1f1 #888;
+}
+
+/* Para basados en WebKit */
+pre::-webkit-scrollbar {
+    height: 2px;
+}
+
+pre::-webkit-scrollbar-track {
+    background: #888;
+}
+
+pre::-webkit-scrollbar-thumb {
+    background-color: var(--main-fg-color);
+    /*background-color: #f1f1f1;*/
+}
+
+
+
+
+

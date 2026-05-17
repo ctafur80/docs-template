@@ -1,0 +1,78 @@
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.cdnfonts.com/css/latin-modern-roman');
+@import url('https://fonts.cdnfonts.com/css/latin-modern-math');
+/* @import url('https://fonts.cdnfonts.com/css/latin-modern-sans'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Math&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap'); */
+
+
+
+* {
+
+    /* Fonts */
+    /* --main-font: "STIXTwoText", serif; */
+    /* --main-font: "LMRoman10", serif; */
+    --main-font: "Noto Sans", sans-serif;
+    --main-font-weight: 300;
+    /* --headings-font: "LMSans10", sans-serif; */
+    --headings-font: "Noto Sans", sans-serif;
+    --headings-font-weight: 500;
+    --main-font-size: 1.03em;
+    --main-font-letter-spacing: 0.05rem;
+    /* --math-font: "Noto Sans Math", serif; */
+    --math-font: "Latin Modern Math", serif;
+    --math-font-size: 1.2em;
+    --code-font: "JetBrains Mono", monospace;
+    --code-font-weight: 200;
+    --code-font-strong-weight: 500;
+    --code-font-size: 0.97em;
+
+
+
+
+    /* Dark theme */
+    --main-bg-color: #1e1e1e;
+    --main-fg-color: #b3adad;
+    --boton: rgba(132, 116, 140, 0.95);
+    --math-thm-env-bg:
+        linear-gradient(
+            to right,
+            rgba(44, 44, 61, 0.95),
+            rgba(59, 59, 48, 0.95)
+        );
+    --ax-env-bg:
+        linear-gradient(
+            to right,
+            rgba(61, 44, 51, 0.95),
+            rgba(59, 59, 48, 0.95)
+        );
+
+
+    --code-bg-color: #282828;
+
+
+    /* Light theme */
+    /* --main-bg-color: #e0e8df; */
+
+    /* --main-bg-color: #fff; */
+    /* --main-fg-color: #343832; */
+    /* --boton: rgba(132, 116, 140, 0.95); */
+    /* --math-env-bg-from: rgba(237, 237, 247, 0.95); */
+    /* --math-env-bg-to: rgba(245, 245, 233, 0.95); */
+    /* --euclid-ax-env-from: rgba(250, 237, 243, 0.95), */
+    /* --euclid-ax-env-to: rgba(245, 245, 233, 0.95), */
+    /**/
+
+
+
+
+}
+
+
+
+
+

@@ -1,0 +1,448 @@
+
+
+/* Texto con simbología matemática */
+
+
+
+
+
+
+/* ----------------------------------------- */
+math {
+    font-family: var(--math-font);
+    font-size: var(--math-font-size);
+}
+
+span.math.display,
+span.math.inline {
+    font-size: 100% !important;
+    margin-bottom: 0 !important;
+}
+
+/* TODO Quiero hacer scroll horizontal a esto */
+p > span.math.display {
+    white-space: pre;
+    display: block;
+}
+
+mtext {
+    letter-spacing: 0.03rem;
+}
+
+
+
+
+
+
+/* Note title */
+p span.ntitle {
+    font-style: italic;
+    font-weight: 700;
+}
+
+p span.ntitle::after {
+    content: " --- ";
+    /* contents: "&nbsp;---&nbsp;"; */
+}
+
+
+
+/* ----------------------------------------- */
+
+/* Entornos de tipo teorema */
+
+div.theorem,
+div.lemma,
+div.corollary,
+div.proposition,
+div.definition {
+    display: block;
+    padding: 0.5rem;
+    border-radius: 6px;
+    color: var(--main-fg-color);
+    background: var(--math-thm-env-bg);
+}
+
+div.axiom {
+    display: block;
+    padding: 0.5rem;
+    border-radius: 6px;
+    color: var(--main-fg-color);
+    background: var(--ax-env-bg);
+}
+
+
+
+div.axiom *:first-of-type,
+div.theorem *:first-of-type,
+div.lemma *:first-of-type,
+div.corollary *:first-of-type,
+div.proposition *:first-of-type,
+div.definition *:first-of-type {
+    margin-top: 0;
+}
+
+div.axiom *:last-of-type,
+div.theorem *:last-of-type,
+div.lemma *:last-of-type,
+div.corollary *:last-of-type,
+div.proposition *:last-of-type,
+div.definition *:last-of-type {
+    margin-bottom: 0.2rem;
+}
+
+
+/* Removing the accumulation of bottom margins in MathML elements. */
+math > semantics * {
+    margin-bottom: 0 !important;
+}
+
+
+/* TODO Ver si hay un modo más elegante de hacerlo que con este font-size. */
+math mtext {
+    font-family: var(--main-font);
+    font-size: 0.85em;
+    font-weight: var(--main-font-weight);
+}
+
+
+
+/* Cambio la estética de las listas en los entornos. */
+/*
+div.axiom ol > li,
+div.theorem ol > li,
+div.lemma ol > li,
+div.corollary ol > li,
+div.proposition ol > li,
+div.definition ol > li {
+    counter-increment: list;
+}
+
+div.axiom ol > li::marker,
+div.theorem ol > li::marker,
+div.lemma ol > li::marker,
+div.corollary ol > li::marker,
+div.proposition ol > li::marker,
+div.definition ol > li::marker {
+    content: counter(list, lower-roman) ". ";
+}
+*/
+
+
+/* Demostraciones */
+.env-last-symbol {
+    float: right;
+}
+
+
+
+
+
+
+
+/* ----------------------------------------- */
+
+
+
+
+
+/* Entornos: definiciones, teoremas, etc. */
+
+/* TODO: Hacer que, si van dos seguidos, se haga una separación. El problema es que serían
+ * muchas combinaciones, pues hay muchos tipos de entornos. */
+
+/*
+div.exercise > *:first-child::before {
+    content: "Ejercicio.\2014\00a0";
+    font-style: italic;
+    font-weight: bold;
+}
+
+div.exercise > *:last-child {
+    position: relative;
+}
+
+div.exercise > *:last-child::after {
+    content: "\25c1";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+*/
+
+
+
+div.properties > *:first-child::before {
+    content: "Propiedades.\2014\00a0";
+    font-style: italic;
+    font-weight: bold;
+}
+
+div.properties > *:last-child {
+    position: relative;
+}
+
+div.properties > *:last-child::after {
+    content: "\25c1";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+
+
+
+
+
+
+div.inciso:before {
+    position: absolute;
+    content: "inciso";
+}
+
+
+
+div.example > *:first-child::before {
+    content: "Ejemplo.\2014\00a0";
+    font-style: italic;
+}
+
+div.example > *:last-child {
+    position: relative;
+}
+
+div.example > *:last-child::after {
+    content: "\25c1";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+
+
+
+
+
+
+/* Presentación de proposiciones lógicas */
+
+/* TODO Sacarlo para dejarlo en los ajustes específicos de proyecto. */
+
+/* Quizás, eliminar esta. */
+table.propositions {
+    margin: 0 auto;
+    border: none;
+}
+
+table.propositions td,
+table.propositions th {
+    border: none;
+    text-align: left;
+}
+
+table.propositions td:first-child::after {
+    content: ":";
+}
+
+
+
+
+
+
+
+/*
+div.proof > *:first-child::before {
+    content: "Demostración.\2014\00a0";
+    font-weight: bold;
+    font-style: italic;
+}
+
+div.proof > *:last-child {
+    position: relative;
+}
+
+div.proof > *:last-child::after {
+    content: "\26bf";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+div.proposiciones {
+    display: grid;
+    grid-template-columns: max-content auto;
+    grid-auto-rows: auto;
+    justify-items: start;
+    justify-content: start;
+
+    column-gap: 0.7rem;
+    row-gap: 0.7rem;
+    margin: 1rem 2rem;
+}
+
+/* Permite que los hijos de .fila se integren en el grid global */
+div.proposiciones p {
+    display: contents;
+}
+
+div.proposiciones span.prop-var:after {
+    content: ":";
+}
+
+div.proposiciones span.prop-stat {
+    font-style: italic;
+}
+
+div.proposiciones span.prop-var {
+    justify-self: end;
+}
+
+
+
+
+
+
+/* Divs de ejercicios, ejemplos e incisos */
+
+/*
+div.inciso,
+div.example,
+div.exercise {
+    display: block;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+
+    border-image-source: linear-gradient(to right,
+        var(--main-fg-color) 0%,
+        var(--main-fg-color) 20%,
+        transparent 40%,
+        transparent 100%);
+    border-image-slice: 1;
+}
+
+div.inciso:before,
+div.example:before,
+.exerc_enunciado:before,
+.exerc_sol:before {
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+
+    font-style: italic;
+    font-size: 0.75rem;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Tabla con desarrollo de ecuaciones y explicaciones a la derecha. */
+table.eq-desarrollo {
+    border-collapse: collapse;
+    width: auto;
+    margin: auto;
+}
+
+table.eq-desarrollo tbody {
+    margin: auto;
+}
+
+table.eq-desarrollo,
+table.eq-desarrollo tbody tr,
+table.eq-desarrollo tbody td {
+    border: none;
+}
+
+table.eq-desarrollo tbody tr td {
+    padding-top: 0;
+    vertical-align: top;
+}
+
+table.eq-desarrollo tbody tr td p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+table.eq-desarrollo tbody tr td:first-child p {
+    text-align: right;
+}
+
+table.eq-desarrollo tbody tr td:nth-child(2) p {
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+table.eq-desarrollo tbody tr td:nth-last-child(2) p {
+    text-align: left;
+}
+
+table.eq-desarrollo tbody tr td:last-child p {
+    padding-left: 2rem;
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+
+/* Tabla de descripción. A la izquierda, va un elemento y, a su derecha, su descripción. */
+table.tbl-descr-2-cols {
+    margin: auto;
+    width: auto;
+}
+
+table.tbl-descr-2-cols,
+table.tbl-descr-2-cols tbody tr,
+table.tbl-descr-2-cols tbody td {
+    border: none;
+}
+
+table.tbl-descr-2-cols tbody td {
+    padding-top: 0;
+}
+
+table.tbl-descr-2-cols tbody tr td:first-child {
+    text-align: left;
+}
+
+table.tbl-descr-2-cols tbody tr td:last-child {
+    padding-left: 2rem;
+    text-align: left;
+}
+
+
+
+
+
+
