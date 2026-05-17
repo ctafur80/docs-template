@@ -71,13 +71,13 @@ resource-path:
 html-q-tags: true
 
 css:
-  - web/css/variables.css
-  - web/css/base-mobile-first.css
-  - web/css/tablas.css
-  - web/css/tabla-contenidos.css
-  - web/css/codigo.css
-  - web/css/matematicas.css
-  - web/css/desktop.css
+  - docs-template/web/css/variables.css
+  - docs-template/web/css/base-mobile-first.css
+  - docs-template/web/css/tablas.css
+  - docs-template/web/css/tabla-contenidos.css
+  - docs-template/web/css/codigo.css
+  - docs-template/web/css/matematicas.css
+  - docs-template/web/css/desktop.css
 
 
 highlight-style: docs-template/web/code-hl/zf-darker.theme
@@ -95,16 +95,16 @@ track-changes: accept
 
 # Ajustes para la web de salida.
 include-before-body:
-  - web/html/elemento-breadcrumbs.html
+  - docs-template/web/html/elemento-breadcrumbs.html
 include-after-body:
-  - web/html/etiqueta-final-main.html
+  - docs-template/web/html/etiqueta-final-main.html
 include-in-header:
-  - web/html/elemento-nav.html
-  - web/html/elemento-boton-nav-bar.html
-  # - web/html/carga-breadcrumbs.html
-  # - web/html/carga-nav-bar.html
-  # - web/html/nameref.html
-  # - web/html/carga-ajustes-mathjax.html
+  - docs-template/web/html/elemento-nav.html
+  - docs-template/web/html/elemento-boton-nav-bar.html
+  # - docs-template/web/html/carga-breadcrumbs.html
+  # - docs-template/web/html/carga-nav-bar.html
+  # - docs-template/web/html/nameref.html
+  # - docs-template/web/html/carga-ajustes-mathjax.html
 
 
 # defaults:
