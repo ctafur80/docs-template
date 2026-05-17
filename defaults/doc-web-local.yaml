@@ -80,7 +80,7 @@ css:
   - web/css/desktop.css
 
 
-highlight-style: ../web/code-hl/zf-darker.theme
+highlight-style: /web/code-hl/zf-darker.theme
 
 
 fail-if-warnings: false
